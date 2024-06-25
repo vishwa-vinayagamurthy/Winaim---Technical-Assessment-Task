@@ -1,0 +1,22 @@
+app.get('/my-appointments', (req, res) => {
+
+  const appointments = [
+    {
+      appointmentDate: '2023-03-01',
+      time: '10:00 AM',
+      doctorName: 'Doctor 1',
+      purposeOfVisit: 'Check-up',
+      status: 'Pending',
+    },
+    {
+      appointmentDate: '2023-03-05',
+      time: '2:00 PM',
+      doctorName: 'Doctor 2',
+      purposeOfVisit: 'Follow-up',
+      status: 'Confirmed',
+    },
+
+  ];
+
+  res.json(appointments);
+});
