@@ -1,0 +1,11 @@
+app.get('/book-appointment', (req, res) => {
+  res.render('book-appointment');
+});
+
+app.get('/my-appointments', (req, res) => {
+  res.render('my-appointments');
+});
+
+app.get('/logout', (req, res) => {
+  res.redirect('/login');
+});
