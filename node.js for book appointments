@@ -1,0 +1,4 @@
+app.post('/book-appointment', (req, res) => {
+
+  const { firstName, lastName, gender, dateOfBirth, age, appointmentDate, time, doctorName, purposeOfVisit } = req.body;
+  if (!firstName ||
