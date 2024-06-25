@@ -1,0 +1,53 @@
+.grid-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.grid-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.grid-table th, .grid-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.grid-table th {
+  background-color: #333;
+  color: #fff;
+}
+
+.grid-table td {
+  background-color: #fff;
+}
+
+.grid-data {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.grid-data:last-child {
+  border-bottom: none;
+}
+
+.grid-data .appointment-date {
+  font-weight: bold;
+}
+
+.grid-data .actions {
+  text-align: right;
+}
+
+.grid-data .actions button {
+  margin-left: 10px;
+}
