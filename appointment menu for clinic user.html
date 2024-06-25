@@ -1,0 +1,26 @@
+<div id="appointment-menu">
+  <h1>Appointments</h1>
+  <form id="filter-form">
+    <label for="date-filter">Date:</label>
+    <input type="date" id="date-filter" name="date-filter"><br><br>
+    <label for="doctor-filter">Doctor:</label>
+    <select id="doctor-filter" name="doctor-filter">
+      <option value="">All Doctors</option>
+    </select><br><br>
+    <input type="submit" value="Filter">
+  </form>
+  <table id="appointment-table">
+    <thead>
+      <tr>
+        <th>Appointment Date</th>
+        <th>Appointment Time</th>
+        <th>Patient Name</th>
+        <th>Age</th>
+        <th>Purpose of Visit</th>
+        <th>Doctor Name</th>
+      </tr>
+    </thead>
+    <tbody id="appointment-tbody">
+    </tbody>
+  </table>
+</div>
