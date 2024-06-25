@@ -1,0 +1,42 @@
+<div id="book-appointment-popup" class="popup">
+  <div class="popup-header">
+    <h2>Book Appointment</h2>
+    <button class="close-button" id="close-button">×</button>
+  </div>
+  <div class="popup-content">
+    <form id="book-appointment-form">
+      <label>First Name *</label>
+      <input type="text" id="first-name" value="" readonly>
+
+      <label>Last Name *</label>
+      <input type="text" id="last-name" value="" readonly>
+
+      <label>Gender *</label>
+      <input type="text" id="gender" value="" readonly>
+
+      <label>Date of Birth</label>
+      <input type="text" id="date-of-birth" value="" readonly>
+
+      <label>Age *</label>
+      <input type="text" id="age" value="" readonly>
+
+      <label>Appointment Date *</label>
+      <input type="date" id="appointment-date" required>
+
+      <label>Time *</label>
+      <input type="time" id="time" required>
+
+      <label>Doctor Name</label>
+      <select id="doctor-name">
+        <option value="">Select Doctor</option>
+        <option value="Doctor 1">Doctor 1</option>
+        <option value="Doctor 2">Doctor 2</option>
+      </select>
+
+      <label>Purpose of Visit *</label>
+      <textarea id="purpose-of-visit" required></textarea>
+
+      <button id="book-appointment-button">Book Appointment</button>
+    </form>
+  </div>
+</div>
