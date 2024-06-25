@@ -1,0 +1,48 @@
+const express = require('express');
+const app = express();
+const bodyParser = require('body-parser');
+
+const bookings = [
+  { patientId: 1, appointmentDate: '2023-03-15' },
+  { patientId: 1, appointmentDate: '2023-03-20' },
+  { patientId: 2, appointmentDate: '2023-03-18' },
+];
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.post('/login', (req, res) => {
+  const { username, password } = req.body;
+
+  const user = users.find((user) => user.username === username);
+
+  if (!user) {
+    return res.status(401).send('Invalid username or password');
+  }
+
+  if (user.password!== password) {
+    return res.status(401).send('Invalid username or password');
+  }
+
+
+  res.redirect('/home');
+});
+
+
+app.get('/home', (req, res) => {
+  const patientId = req.query.patientId; 
+
+
+  const totalBookings = bookings.filter((booking) => booking.patientId === patientId).length;
+
+  const nextBookingDate = bookings.filter((booking) => booking.patientId === patientId)
+   .reduce((minDate, booking) => {
+      return booking.appointmentDate < minDate? booking.appointmentDate : minDate;
+    }, '9999-12-31');
+
+  res.render('home', { totalBookings, nextBookingDate });
+});
+
+app.listen(3000, () => {
+  console.log('Server listening on port 3000');
+});
